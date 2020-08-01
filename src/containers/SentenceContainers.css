@@ -1,0 +1,25 @@
+.sentenceText {
+    font-size: 100%;
+}
+
+.wholeSentenceText {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    display: inline;
+}
+
+.sentenceContainer {
+    margin: 4rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.Yes{
+    margin-right: 50px !important;
+
+}
+
+.yesNoButtons {
+    justify-content: center;
+}
