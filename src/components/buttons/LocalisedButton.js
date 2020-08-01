@@ -16,13 +16,13 @@ function randomInt(length){
   return output
 }
 
-export default function LocalisedButton({LocalSlang}) {
+export default function LocalisedButton({LocalSlang, onClick}) {
     const classes = useStyles();
 
     if(LocalSlang && LocalSlang.length > 0){
       return (
         <div className={classes.root}>
-          <Button>{LocalSlang[randomInt(LocalSlang.length)]}</Button>
+          <Button onClick={onClick}>{LocalSlang[randomInt(LocalSlang.length)]}</Button>
         </div>
     );
     }else{

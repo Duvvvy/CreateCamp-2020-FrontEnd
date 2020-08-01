@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import {SentanceContainer} from './containers/SentanceContainer';
+import {SentenceContainer} from './containers/SentenceContainer';
 
 function App() {
   return (
-    <SentanceContainer></SentanceContainer>
-
+    <SentenceContainer/>
   );
 }
 
