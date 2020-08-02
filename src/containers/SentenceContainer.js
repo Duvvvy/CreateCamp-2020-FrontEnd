@@ -46,7 +46,7 @@ export function SentenceContainer() {
           <Fragment>
         <div className = "wholeSentenceText">
           <span className = "niceSentenceText">Why not try </span> <br></br>
-          <span className = "angrySentenceText"><a href={suggestion.zenbulink} styles="color: inherit"> {suggestion.name} </a> </span>
+          <span className = "angrySentenceText"><a style={{color: "black"}} href={suggestion.zenbulink} styles="color: inherit"> {suggestion.name} </a> </span>
           </div>
 
           <div>
@@ -73,17 +73,15 @@ export function SentenceContainer() {
         "Lesh go!",
         "ya yeet!",
         "Choice",
-        "Āe",
+        "Āe   ",
         "Yea!",
         "Keen as",
-        "Lets get it",
-        "Aight then",
+        "Get it",
+        "Aight",
         "heck yea",
         "I want it",
         "Love it",
-        "Aye aye, captain!",
-        "Yes, yes, and yes!",
-        "Straight up g!",
+        "Straight up",
         "Deal!",
         "Chur bro"
         ]
@@ -101,7 +99,10 @@ export function SentenceContainer() {
         "Not the play",
         "ceebs",
         "Gap it",
-        "Not even"
+        "Not even",
+        "Nah cuz",
+        "not swag",
+        "not a fan"
         ]
         }
         onClick={() => getData()}
@@ -111,10 +112,17 @@ export function SentenceContainer() {
         </Fragment>
         } 
         {(suggestion == null && isLoading)&&
-          <p>Loading...</p>
+        <>
+          <p className="mediumSentenceText">Finding local businesses</p>
+            <div size="lg" class="spinner-border" role="status">
+              <span animation="grow" size="lg" class="sr-only">Loading...</span>
+            </div>
+        
+        </>
+          
         }
         {(suggestion == null && !isLoading) && 
-          <div>unluggy uce no locations near you. Don't pack a sad, try us out again when you are closer to town! <span role="img" aria-label="sad face">😭</span></div>
+          <p className="mediumSentenceText">unluggy uce no locations near you. Don't pack a sad, try us out again when you are closer to town! <span role="img" aria-label="sad face">😭</span></p>
         }
       </div>
   );
