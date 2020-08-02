@@ -45,19 +45,19 @@ export function SentenceContainer() {
         {(suggestion && !isLoading) && 
           <Fragment>
         <div className = "wholeSentenceText">
-          <span className = "sentenceText">Why not try </span>
-          <span className = "sentenceText"><a href={suggestion.zenbulink}> {suggestion.name} </a> </span>
+          <span className = "niceSentenceText">Why not try </span> <br></br>
+          <span className = "angrySentenceText"><a href={suggestion.zenbulink} styles="color: inherit"> {suggestion.name} </a> </span>
           </div>
 
           <div>
           {/* <p className = "sentenceText">{suggestion[count].address},</p> */}
-          <p className = "sentenceText"><i>{suggestion.tags}</i></p> 
-          <p className = "sentenceText">they are only {suggestion.distance} km away</p>
+          {/* <p className = "sentenceText"><i>{suggestion.tags}</i></p>  */}
+          <p className = "niceSentenceText">they are only {suggestion.distance} km away</p>
         </div>
 
       <div>
-      <p className="">Price: {suggestion.price}</p>
-      <p className="">Rating: {suggestion.rating}</p>
+      <div className="mediumSentenceText">Price: <span className="smallerSentenceText">{`${'$ '.repeat(parseInt(suggestion.price))}`}</span></div>
+      <div className="mediumSentenceText">Rating: <span className="smallerSentenceText">{`${'⭐️ '.repeat(parseInt(suggestion.rating))}`}</span></div>
       </div>
 
         <div className = "yesNoButtons"> 
