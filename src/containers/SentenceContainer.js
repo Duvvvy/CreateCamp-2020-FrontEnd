@@ -45,19 +45,19 @@ export function SentenceContainer() {
         {(suggestion && !isLoading) && 
           <Fragment>
         <div className = "wholeSentenceText">
-          <span className = "sentenceText">Why not try </span>
-          <span className = "sentenceText"><a href={suggestion.zenbulink}> {suggestion.name} </a> </span>
+          <span className = "niceSentenceText">Why not try </span> <br></br>
+          <span className = "angrySentenceText"><a style={{color: "black"}} href={suggestion.zenbulink} styles="color: inherit"> {suggestion.name} </a> </span>
           </div>
 
           <div>
           {/* <p className = "sentenceText">{suggestion[count].address},</p> */}
-          <p className = "sentenceText"><i>{suggestion.tags}</i></p> 
-          <p className = "sentenceText">they are only {suggestion.distance} km away</p>
+          {/* <p className = "sentenceText"><i>{suggestion.tags}</i></p>  */}
+          <p className = "niceSentenceText">they are only {suggestion.distance} km away</p>
         </div>
 
       <div>
-      <p className="">Price: {suggestion.price}</p>
-      <p className="">Rating: {suggestion.rating}</p>
+      <div className="mediumSentenceText">Price: <span className="smallerSentenceText">{`${'$ '.repeat(parseInt(suggestion.price))}`}</span></div>
+      <div className="mediumSentenceText">Rating: <span className="smallerSentenceText">{`${'⭐️ '.repeat(parseInt(suggestion.rating))}`}</span></div>
       </div>
 
         <div className = "yesNoButtons"> 
@@ -73,17 +73,15 @@ export function SentenceContainer() {
         "Lesh go!",
         "ya yeet!",
         "Choice",
-        "Āe",
+        "Āe   ",
         "Yea!",
         "Keen as",
-        "Lets get it",
-        "Aight then",
+        "Get it",
+        "Aight",
         "heck yea",
         "I want it",
         "Love it",
-        "Aye aye, captain!",
-        "Yes, yes, and yes!",
-        "Straight up g!",
+        "Straight up",
         "Deal!",
         "Chur bro"
         ]
@@ -101,7 +99,10 @@ export function SentenceContainer() {
         "Not the play",
         "ceebs",
         "Gap it",
-        "Not even"
+        "Not even",
+        "Nah cuz",
+        "not swag",
+        "not a fan"
         ]
         }
         onClick={() => getData()}
@@ -111,10 +112,17 @@ export function SentenceContainer() {
         </Fragment>
         } 
         {(suggestion == null && isLoading)&&
-          <p>Loading...</p>
+        <>
+          <p className="mediumSentenceText">Finding local businesses</p>
+            <div size="lg" class="spinner-border" role="status">
+              <span animation="grow" size="lg" class="sr-only">Loading...</span>
+            </div>
+        
+        </>
+          
         }
         {(suggestion == null && !isLoading) && 
-          <div>unluggy uce no locations near you. Don't pack a sad, try us out again when you are closer to town! <span role="img" aria-label="sad face">😭</span></div>
+          <p className="mediumSentenceText">unluggy uce no locations near you. Don't pack a sad, try us out again when you are closer to town! <span role="img" aria-label="sad face">😭</span></p>
         }
       </div>
   );

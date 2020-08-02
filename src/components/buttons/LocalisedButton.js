@@ -13,12 +13,21 @@ export default function LocalisedButton({LocalSlang, onClick}) {
       return (
        
        <div>
-          <Button display="inline" onClick={onClick}>{LocalSlang[randomInt(LocalSlang.length)]}</Button>
+          <Button 
+            display="inline" 
+            style={{
+              backgroundColor: "darkgrey",
+              color: "white",
+              fontSize: "50px",
+              textAlign: "center",
+            }}
+            className="mx-5 my-5"
+            onClick={onClick}>{LocalSlang[randomInt(LocalSlang.length)]}</Button>
         </div>
     );
     }else{
       return(
-        <div>unluggy uce no locations near you <span role="img" aria-label="sad face">😭</span></div>
+        <p className="mediumSentenceText">unluggy uce no locations near you <span role="img" aria-label="sad face">😭</span></p>
       )
     }
     

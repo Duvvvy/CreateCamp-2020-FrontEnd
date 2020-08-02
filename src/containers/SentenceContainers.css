@@ -1,5 +1,40 @@
-.sentenceText {
+.angrySentenceText {
     font-size: 100%;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color: #000;
+    line-height: 60px;
+    text-decoration: underline;
+
+
+}
+
+.niceSentenceText {
+    font-size: 100%;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: #000;
+    line-height: 60px;
+}
+
+.smallerSentenceText {
+    font-size: 100%;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 60px;
+    color: green;
+}
+
+.mediumSentenceText {
+    font-size: 100%;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #000;
+    line-height: 60px;
 }
 
 .wholeSentenceText {
